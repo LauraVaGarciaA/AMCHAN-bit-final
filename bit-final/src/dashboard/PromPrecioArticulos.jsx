@@ -1,3 +1,5 @@
+import infographic from "../images/infographic.png"
+import './Panel.css';
 
 const PromPrecioArticulos = (props) => {
     const data = props;
@@ -10,7 +12,8 @@ const PromPrecioArticulos = (props) => {
         <h2>Precio promedio de productos:
             <div className="item">
             ${average}
-            </div> 
+            </div>
+            <img className='infographic' src={infographic}></img>
         </h2>
             
     </div>

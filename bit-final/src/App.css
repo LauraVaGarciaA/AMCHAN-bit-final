@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: rgb(205, 225, 243);
+  background: linear-gradient(90deg, rgba(212,95,145,1) 24%, rgba(121,84,150,1) 100%);
 }
 
   h1{
@@ -25,6 +25,7 @@ body{
     margin: 3rem;
     padding: 2rem;
     text-align: center;
+    color:rgba(212,95,145,1);
   }
 
   footer{

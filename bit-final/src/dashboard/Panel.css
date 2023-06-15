@@ -10,7 +10,6 @@
 
 div .panel{
     margin: 0.4rem;
-    font-size: 0.5rem;
     width: 85%;
     height: auto;
     margin-left: 2rem;
@@ -18,9 +17,14 @@ div .panel{
   }
 
 div .panel .container{
-    border-radius: 1rem;
-    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
     box-shadow: 0 12px 14px black;
+    transition: 300ms ease-in-out;
+}
+
+.panel:hover > :not(:hover){
+    opacity: 0.4;
 }
 
 div .item{
@@ -32,25 +36,27 @@ div .item{
 
 table{
     font-size: 1.5rem;
-    margin: 0.2rem;
     padding: 2.2rem;
+    margin-left: -1rem;
     text-align: center;
-    margin-left: 3rem;
+    color:black;
 }
 
 th{
-    border: 1px solid rgb(253, 246, 247);
-    background-color: rgb(253, 246, 247);
+    border: 1px solid rgba(212,95,145,1);
+    background: rgba(212,95,145,1);
+    color:rgb(255, 255, 255);
     font-size: 1.5rem;
     padding: 0.5rem;
-    box-shadow: 0 8px 10px black;
+    box-shadow: 2px 3px 7px 0 black;
     
 }
 
 td{
-    border: 1px solid rgb(253, 246, 247);
-    background-color: rgb(253, 246, 247);
-    box-shadow: 0 8px 10px black;
+    border: 1px solid rgba(212,95,145,1);
+    background: rgba(212,95,145,1);
+    color: white;
+    box-shadow: 1px 2px 5px 0 black;
 }
 
 @media screen and (min-width: 768px){
@@ -65,11 +71,16 @@ td{
         font-size: 2rem;
     }
 
+    img {
+        width: 5rem;
+        height: 5rem;
+    }
+
     table{
         font-size: 2rem;
         margin: 0.2rem;
         padding: 2.2rem;
-        margin-left: 12.5rem;
+        margin-left: 7rem;
     }
 
     th{
@@ -92,7 +103,7 @@ td{
             font-size: 2.5rem;
             margin: 0.2rem;
             padding: 2.2rem;
-            margin-left: 18rem;
+            margin-left: 12rem;
         }
 
         th{

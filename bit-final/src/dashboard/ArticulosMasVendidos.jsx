@@ -1,4 +1,5 @@
-
+import rating from "../images/rating.png"
+import './Panel.css';
 const ArticulosMasVendidos = (props) => {
 
   const data = props;
@@ -27,8 +28,8 @@ const ArticulosMasVendidos = (props) => {
   
   return (
     <div className="container">
-      <h2>Top 10 de artículos más vendidos:</h2>
-       <table>
+      <h2>Top 10 de artículos más vendidos:
+      <table>
     <thead>
         <tr>
             <th>ID Producto</th>
@@ -43,7 +44,9 @@ const ArticulosMasVendidos = (props) => {
             </tr>
         ))}
     </tbody>
-</table>
+    </table>
+    <img className='rating' src={rating}></img>
+      </h2>
     </div>
   )
 }

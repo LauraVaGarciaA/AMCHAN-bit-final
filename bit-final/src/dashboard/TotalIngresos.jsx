@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
+import money from "../images/money.png"
 import axios from "axios";
+import './Panel.css';
+
 
 const TotalIngresos = (props) => {
     const [totalIngresos, setTotalIngresos] = useState(0);
@@ -9,8 +12,8 @@ const TotalIngresos = (props) => {
         const precioProducto = async (productId) => {
             try {
                 const val = await axios.get(`${data.data.API}/products/${productId}`);
-                const producto = val.data;
-                return producto.price;
+                const productos = val.data;
+                return productos.price;
             } catch (error){
                 alert(`Se presentó un error al obtener el precio del producto ${productId}: ${error.message}`);
             return 0;
@@ -24,28 +27,32 @@ const TotalIngresos = (props) => {
                 let totalIngresos = 0;
                 for (const ecom of ecome){
                     let subtotal =0;
-                    for (const producto of ecom.products){
-                        const precio = await precioProducto(producto.productId);
-                        subtotal += (Math.round(precio*producto.quantity)*100)/100;
+                    for (const productos of ecom.products){
+                        const precio = await precioProducto(productos.productId);
+                        subtotal += precio*productos.quantity;
                     }
                     totalIngresos += subtotal;
                 }
-                setTotalIngresos(totalIngresos);
+                setTotalIngresos(totalIngresos.toFixed(3));
             } catch(error){
                 alert(`Se presentó un error al obtener el total de ingresos: ${error.message}`);
             }
         };
 
             calculoIngresos();
-    }, []);
+    }, []); 
+
+
   return (
     <div>
         <h2>Total Ingresos: 
             <div className="item">
             ${totalIngresos}
             </div>
+            <img className='money' src={money}></img>
         </h2>
     </div>
+
   );
 };
 

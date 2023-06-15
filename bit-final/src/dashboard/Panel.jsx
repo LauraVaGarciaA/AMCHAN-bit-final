@@ -40,7 +40,7 @@ import './Panel.css';
       </div>
 
       <div className="container">
-      <TotalIngresos dataCart={dataCart} />
+      <TotalIngresos data={data} />
       </div>
 
       <div className="container">

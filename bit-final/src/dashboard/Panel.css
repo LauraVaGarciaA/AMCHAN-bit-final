@@ -1,0 +1,104 @@
+*{
+    font-family: 'Questrial', sans-serif;
+    margin:0;
+    padding: 0;
+  }
+
+  html{
+    font-size: 62.5%; /*10px*/
+}
+
+div .panel{
+    margin: 0.4rem;
+    font-size: 0.5rem;
+    width: 85%;
+    height: auto;
+    margin-left: 2rem;
+    
+  }
+
+div .panel .container{
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 12px 14px black;
+}
+
+div .item{
+    text-align: center;
+    margin: 1.3rem;
+    padding: 1.3rem;
+    font-size: 1.6rem;
+}
+
+table{
+    font-size: 1.5rem;
+    margin: 0.2rem;
+    padding: 2.2rem;
+    text-align: center;
+    margin-left: 3rem;
+}
+
+th{
+    border: 1px solid rgb(253, 246, 247);
+    background-color: rgb(253, 246, 247);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 8px 10px black;
+    
+}
+
+td{
+    border: 1px solid rgb(253, 246, 247);
+    background-color: rgb(253, 246, 247);
+    box-shadow: 0 8px 10px black;
+}
+
+@media screen and (min-width: 768px){
+    div .panel{
+        margin: 1.5rem;
+        font-size: 1.5rem;
+        width: 65%;
+        margin-left: 13rem;
+      }
+
+      div .item{
+        font-size: 2rem;
+    }
+
+    table{
+        font-size: 2rem;
+        margin: 0.2rem;
+        padding: 2.2rem;
+        margin-left: 12.5rem;
+    }
+
+    th{
+        font-size: 2rem;
+    }
+
+    @media screen and (min-width: 1024px){
+        div .panel{
+            margin: 1.5rem;
+            font-size: 1.8rem;
+            width: 65%;
+            margin-left: 16rem;
+          }
+
+          div .item{
+            font-size: 2.5rem;
+        }
+
+        table{
+            font-size: 2.5rem;
+            margin: 0.2rem;
+            padding: 2.2rem;
+            margin-left: 18rem;
+        }
+
+        th{
+            font-size: 2.5rem;
+        }
+    }
+    
+}
+
